@@ -33,7 +33,7 @@ const ReviewForm = (props) => {
       }
 
       if  (shouldRedirect) {
-        return <Redirect to={`/listings/${shouldRedirect}`} /> 
+        return <Redirect to={"/listings"} /> 
        } 
 
     return (
