@@ -74,12 +74,20 @@ const SingleListing = (props) => {
             </div>
 
             </div>
+            {localStorage.getItem('userId') ?
+            <div>
             <div>
             <Link to={`/listings/${props.id}/reviews`}><button className="reviewButton">Write a review</button></Link>
             </div>
             <div className="allReviewContainer">
              <AllReviews listingId={props.id} setShouldReload={setShouldReload}/> 
             </div>
+            </div>
+            :
+            <div className="allReviewContainer">
+             <AllReviews listingId={props.id} setShouldReload={setShouldReload}/> 
+            </div>
+            }
         </div>
     )
 }
